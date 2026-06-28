@@ -4,152 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurai Studio | Professional Photography</title>
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">GAURAI<span>STUDIO</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav-actions">
-            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-camera-retro"></i> <span>GauraiStudio</span>
+            </div>
+            
+            <!-- Menu Tile / Desktop Nav -->
+           <nav class="nav-menu" id="navMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="galleries.html">Galleries</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+            <div class="nav-actions">
+                <!-- Dark/Light Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- Mobile Menu Tile Trigger -->
+                <div class="menu-tile" id="menuTile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-slideshow">
-            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1920&q=80');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80');"></div>
-        </div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Capturing Your Most Precious Moments</h1>
-            <p>Professional storytelling through the art of premium lens work.</p>
-            <a href="contact.html" class="btn-cta">Book a Session</a>
+            <p>Professional wedding, portrait, and landscape photography tailored to your story.</p>
+            <a href="#" class="cta-btn">Book a Session</a>
         </div>
     </section>
 
-    <section class="intro-section">
+    <!-- Brief About Section -->
+    <section class="about-intro">
         <div class="container">
             <h2>Welcome to Gaurai Studio</h2>
-            <div class="divider"></div>
-            <p>We believe photography is more than just taking pictures—it’s about preserving emotions, framing life milestones, and telling raw, authentic visual stories. Whether it's the intimate glance of a wedding day, a bold corporate portrait, or the serene expanse of a landscape, we bring creative perspective and precision to every frame.</p>
-            <a href="about.html" class="text-link">Read Our Full Story →</a>
+            <div class="heading-border"></div>
+            <p>We believe that every picture tells a unique story. With over a decade of capturing raw emotions, breathtaking landscapes, and timeless celebrations, our studio brings your memories to life. We blend artistic vision with technical precision to deliver stunning visual narratives you will cherish forever.</p>
         </div>
     </section>
 
-    <section class="featured-gallery">
+    <!-- Featured Galleries Grid -->
+    <section class="featured-galleries">
         <div class="container">
-            <h2>Featured Portfolios</h2>
-            <p class="section-subtitle">A curated glimpse into our favorite captures</p>
+            <h2>Featured Galleries</h2>
+            <div class="heading-border"></div>
             
             <div class="gallery-grid">
+                <!-- Item 1 -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" alt="Weddings">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Weddings">
                     <div class="gallery-overlay">
                         <h3>Weddings</h3>
-                        <a href="gallery.html#weddings" class="btn-sm">View Gallery</a>
+                        <a href="#">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
+                <!-- Item 2 -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Portraits">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Portraits">
                     <div class="gallery-overlay">
                         <h3>Portraits</h3>
-                        <a href="gallery.html#portraits" class="btn-sm">View Gallery</a>
+                        <a href="#">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
+                <!-- Item 3 -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Landscapes">
+                    <img src="https://images.unsplash.com/photo-1472214222541-d510753a8707?auto=format&fit=crop&q=80&w=600" alt="Landscapes">
                     <div class="gallery-overlay">
                         <h3>Landscapes</h3>
-                        <a href="gallery.html#landscapes" class="btn-sm">View Gallery</a>
+                        <a href="#">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Slider -->
     <section class="testimonials">
         <div class="container">
-            <h2>Client Trust</h2>
-            <div class="slider-wrapper">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-                        <p class="review-text">"An absolutely incredible experience. They made us feel completely at ease during our wedding shoot, and the final pictures completely blew us away!"</p>
-                        <h4 class="client-name">Sarah & David</h4>
-                    </div>
-                    <div class="testimonial-slide">
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-                        <p class="review-text">"The professional portraits taken for my corporate profile were exceptional. Highly recommend their eye for detail and clean lighting layouts."</p>
-                        <h4 class="client-name">Michael Chang</h4>
-                    </div>
+            <h2>Client Testimonials</h2>
+            <div class="heading-border"></div>
+            
+            <div class="slider-container">
+                <div class="testimonial-slide active">
+                    <p class="quote">"Absolutely incredible experience! They made us feel so comfortable during our wedding shoot, and the final photos completely blew us away."</p>
+                    <h4 class="client-name">- Sarah & David M.</h4>
                 </div>
+                <div class="testimonial-slide">
+                    <p class="quote">"The portraits taken for my professional portfolio were top-notch. Exceptional lighting, direction, and sharp editing quality."</p>
+                    <h4 class="client-name">- James L.</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="quote">"Stunning landscape prints that now showcase beautifully in our living room. True master of lighting and natural frames."</p>
+                    <h4 class="client-name">- Elena R.</h4>
+                </div>
+                
+                <!-- Slider Controls -->
                 <div class="slider-dots">
                     <span class="dot active" onclick="currentSlide(0)"></span>
                     <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <!-- Footer -->
+    <footer>
         <div class="footer-container">
+            <!-- Studio Info & Socials -->
             <div class="footer-box">
                 <h3>Gaurai Studio</h3>
-                <p>Preserving timeless memories through standard modern photography frameworks.</p>
-                <div class="social-icons studio-socials">
-                    <h4>Follow Our Work:</h4>
-                    <a href="https://instagram.com/gauraistudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com/gauraistudio" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/gauraistudio" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://pinterest.com/gauraistudio" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                <p>Preserving your beautiful milestones with passion and elegance.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
-            
+
+            <!-- Quick Contacts -->
             <div class="footer-box">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
+                <h3>Contact Shop</h3>
+                <p><i class="fa-solid fa-envelope"></i> studio@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (234) 567-890</p>
+                <p><i class="fa-solid fa-location-dot"></i> Studio Ave, Creative City</p>
             </div>
-            
-            <div class="footer-box">
-                <h3>Contact & Enquiries</h3>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gaurauiwebsolutions@yahoo.com">gaurauiwebsolutions@yahoo.com</a></p>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nare.anand@yahoo.com">nare.anand@yahoo.com</a></p>
-                
-                <div class="social-icons developer-socials">
-                    <h4>Connect with Developer:</h4>
-                    <a href="https://instagram.com/gaurai_websolutions" target="_blank" title="Gaurai Websolutions Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com/in/gaurai-websolutions" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/gauraiwebsolutions" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://facebook.com/gauraiwebsolutions" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+
+            <!-- Developer Info & Branding -->
+            <div class="footer-box dev-box">
+                <h3>Developer Profile</h3>
+                <p><i class="fa-solid fa-user"></i> Anand Nare</p>
+                <p><i class="fa-solid fa-envelope"></i> nare.anand@yahoo.com</p>
+                <p><i class="fa-solid fa-envelope"></i> gaurauiwebsolutions@yahoo.com</p>
+                <div class="social-icons dev-socials">
+                    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2026 Gaurai Studio. All Rights Reserved.</p>
-            <p class="credit">Developed and Designed by <strong>Gaurai Websolutions</strong></p>
+            <p class="dev-credit">This website is developed and designed by <strong>Gaurai Websolutions</strong>.</p>
         </div>
     </footer>
 
