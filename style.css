@@ -1694,3 +1694,56 @@ h1, h2, h3, .logo {
         right: 0;
     }
 }
+
+
+/* --- Mobile Navigation Structural Core --- */
+@media (max-width: 768px) {
+    /* Ensure the toggle icon button is visible on mobile screens */
+    .menu-toggle {
+        display: block !important;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: var(--text-primary);
+        z-index: 1001;
+        padding: 5px;
+    }
+
+    /* Set up the initial hidden off-screen drawer position */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden completely off-screen to the right */
+        width: 75%;   /* Takes up 75% of screen width when slid open */
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--bg-secondary);
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        
+        padding: 100px 24px 40px 24px;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra-smooth slide animation */
+        z-index: 1000;
+    }
+
+    /* --- The Missing Link: Class Applied via JavaScript Click --- */
+    .nav-links.mobile-active {
+        right: 0; /* Slides smoothly into view */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+}
