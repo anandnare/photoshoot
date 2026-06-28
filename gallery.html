@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery | Gaurai Studio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">GAURAI<span>STUDIO</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80');">
+        <div class="header-content">
+            <h1>Our Portfolio</h1>
+            <div class="small-divider"></div>
+            <p>A visual archive of preserved moments, emotions, and landscapes.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container-gallery">
+            
+            <!-- JavaScript-driven Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+            </div>
+
+            <!-- Masonry Grid Layout -->
+            <div class="masonry-grid" id="masonry-grid">
+                <!-- Wedding Images -->
+                <div class="masonry-item wedding" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Couple Portrait">
+                </div>
+                <div class="masonry-item wedding" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&h=900&q=80" alt="Wedding Rings Close up">
+                </div>
+
+                <!-- Portrait Images -->
+                <div class="masonry-item portrait" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=850&q=80" alt="Studio Studio Fine Art Portrait">
+                </div>
+                <div class="masonry-item portrait" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Corporate Executive Portrait">
+                </div>
+
+                <!-- Commercial Images -->
+                <div class="masonry-item commercial" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Minimal Product Advertisement">
+                </div>
+                <div class="masonry-item commercial" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1493106819501-66d381c466f1?auto=format&fit=crop&w=600&h=900&q=80" alt="Interior Architecture Spatial Photography">
+                </div>
+
+                <!-- Nature/Landscape Images -->
+                <div class="masonry-item nature" data-index="6">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Yosemite Mirror Mountain Reflection">
+                </div>
+                <div class="masonry-item nature" data-index="7">
+                    <img src="https://images.unsplash.com/photo-1472214222541-d510753a4907?auto=format&fit=crop&w=600&h=800&q=80" alt="Serene Green Mountain Valley Meadows">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Lightbox Pop-up Modal -->
+    <div class="lightbox" id="lightbox-modal">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Enlarged View Preview">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Gaurai Studio</h3>
+                <p>Preserving timeless memories through standard modern photography frameworks.</p>
+                <div class="social-icons studio-socials">
+                    <h4>Follow Our Work:</h4>
+                    <a href="https://instagram.com/gauraistudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/gauraistudio" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/gauraistudio" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://pinterest.com/gauraistudio" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Contact & Enquiries</h3>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gaurauiwebsolutions@yahoo.com">gaurauiwebsolutions@yahoo.com</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nare.anand@yahoo.com">nare.anand@yahoo.com</a></p>
+                
+                <div class="social-icons developer-socials">
+                    <h4>Connect with Developer:</h4>
+                    <a href="https://instagram.com/gaurai_websolutions" target="_blank" title="Gaurai Websolutions Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/gaurai-websolutions" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gauraiwebsolutions" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://facebook.com/gauraiwebsolutions" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gaurai Studio. All Rights Reserved.</p>
+            <p class="credit">Developed and Designed by <strong>Gaurai Websolutions</strong></p>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

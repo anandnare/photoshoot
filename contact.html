@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Bookings | Gaurai Studio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">GAURAI<span>STUDIO</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1520881363902-a0ff4e722963?auto=format&fit=crop&w=1920&q=80');">
+        <div class="header-content">
+            <h1>Let's Connect</h1>
+            <div class="small-divider"></div>
+            <p>Ready to lock in your date? Drop a note to transform moments into lasting legacies.</p>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Main Split Section -->
+    <section class="contact-section">
+        <div class="container-contact">
+            <div class="contact-split-wrapper">
+                
+                <!-- Left Hand Side: Booking Lead Capture Form Form -->
+                <div class="contact-form-block">
+                    <h2>Inquire About Your Date</h2>
+                    <p class="form-intro-text">Fill out our structured inquiry tracker below. We generally follow up within 24 business hours.</p>
+                    
+                    <form id="booking-inquiry-form" action="#" method="POST" novalidate>
+                        <div class="form-group-row">
+                            <div class="form-input-element">
+                                <label for="client-name">Full Name *</label>
+                                <input type="text" id="client-name" name="name" placeholder="John Doe" required>
+                                <span class="error-msg">Name is required</span>
+                            </div>
+                            <div class="form-input-element">
+                                <label for="client-email">Email Address *</label>
+                                <input type="email" id="client-email" name="email" placeholder="john@example.com" required>
+                                <span class="error-msg">Provide a valid email address</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-input-element">
+                                <label for="client-phone">Phone Number *</label>
+                                <input type="tel" id="client-phone" name="phone" placeholder="(555) 000-0000" required>
+                                <span class="error-msg">Phone number is required</span>
+                            </div>
+                            <div class="form-input-element">
+                                <label for="event-date">Desired Event Date *</label>
+                                <input type="date" id="event-date" name="event_date" required>
+                                <span class="error-msg">Please select an event date</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-input-element">
+                                <label for="event-location">Venue / Location *</label>
+                                <input type="text" id="event-location" name="location" placeholder="City, State or Venue Name" required>
+                                <span class="error-msg">Location details are required</span>
+                            </div>
+                            <div class="form-input-element">
+                                <label for="event-type">Session / Event Type *</label>
+                                <select id="event-type" name="event_type" required>
+                                    <option value="" disabled selected>Select a package type...</option>
+                                    <option value="portrait">Fine-Art Portrait</option>
+                                    <option value="wedding">Full Wedding Coverage</option>
+                                    <option value="commercial">Commercial / Architectural</option>
+                                    <option value="other">Other Event Celebration</option>
+                                </select>
+                                <span class="error-msg">Please choose an option</span>
+                            </div>
+                        </div>
+
+                        <div class="form-input-element full-width-field">
+                            <label for="client-message">Tell Us More About Your Vision *</label>
+                            <textarea id="client-message" name="message" rows="5" placeholder="Share specific details, timelines, styling values, or dynamic requests..." required></textarea>
+                            <span class="error-msg">Message body cannot be left empty</span>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Booking Request <i class="fa-solid fa-paper-plane"></i></button>
+                        <div id="form-feedback-message" class="form-alert hidden"></div>
+                    </form>
+                </div>
+
+                <!-- Right Hand Side: Sidebar with Calendar Grid and Direct Channels -->
+                <div class="contact-info-sidebar">
+                    
+                    <!-- Availability Frontend Visual Calendar Module Layout -->
+                    <div class="sidebar-box availability-calendar-wrapper">
+                        <h3><i class="fa-solid fa-calendar-days"></i> Booking Availability Matrix</h3>
+                        <p class="calendar-meta">Current Month Overview: Plan ahead to avoid slot contention conflicts.</p>
+                        
+                        <div class="calendar-header-months">July 2026</div>
+                        <div class="calendar-grid-days">
+                            <span class="day-lbl">S</span><span class="day-lbl">M</span><span class="day-lbl">T</span><span class="day-lbl">W</span><span class="day-lbl">T</span><span class="day-lbl">F</span><span class="day-lbl">S</span>
+                            
+                            <!-- Calendar placeholders showing simulated system states -->
+                            <span class="date-cell out-month">28</span><span class="date-cell out-month">29</span><span class="date-cell out-month">30</span>
+                            <span class="date-cell available">1</span><span class="date-cell available">2</span><span class="date-cell booked" title="Booked">3</span><span class="date-cell booked" title="Booked">4</span>
+                            <span class="date-cell available">5</span><span class="date-cell available">6</span><span class="date-cell available">7</span><span class="date-cell available">8</span><span class="date-cell available">9</span><span class="date-cell available">10</span><span class="date-cell booked" title="Booked">11</span>
+                            <span class="date-cell available">12</span><span class="date-cell available">13</span><span class="date-cell available">14</span><span class="date-cell available">15</span><span class="date-cell available">16</span><span class="date-cell available">17</span><span class="date-cell booked" title="Booked">18</span>
+                            <span class="date-cell available">19</span><span class="date-cell available">20</span><span class="date-cell available">21</span><span class="date-cell available">22</span><span class="date-cell available">23</span><span class="date-cell available">24</span><span class="date-cell available">25</span>
+                            <span class="date-cell available">26</span><span class="date-cell available">27</span><span class="date-cell available">28</span><span class="date-cell available">29</span><span class="date-cell available">30</span><span class="date-cell available">31</span><span class="date-cell out-month">1</span>
+                        </div>
+                        <div class="calendar-legend">
+                            <span class="legend-item"><span class="dot available-dot"></span> Available</span>
+                            <span class="legend-item"><span class="dot booked-dot"></span> Preserved/Booked</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Reach Touchpoints Block -->
+                    <div class="sidebar-box direct-info-box">
+                        <h3>Direct Channels</h3>
+                        <p class="channel-row"><i class="fa-solid fa-phone"></i> <span>+1 (555) 234-5678</span></p>
+                        <p class="channel-row"><i class="fa-solid fa-envelope"></i> <a href="mailto:gaurauiwebsolutions@yahoo.com">gaurauiwebsolutions@yahoo.com</a></p>
+                        <p class="channel-row"><i class="fa-solid fa-location-dot"></i> <span>450 Fine-Art Avenue, Creative Suite 10, New York, NY 10001</span></p>
+                    </div>
+
+                    <!-- Connective Social Networks Prominent Block -->
+                    <div class="sidebar-box direct-social-box">
+                        <h3>Connective Daily Upload Streams</h3>
+                        <p>We upload preview frames, unboxed albums, and real time studio moments across digital nodes daily:</p>
+                        <div class="social-channels-links">
+                            <a href="https://instagram.com/gauraistudio" target="_blank" class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://facebook.com/gauraistudio" target="_blank" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                            <a href="https://pinterest.com/gauraistudio" target="_blank" class="social-btn pinterest"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Google Maps Interactive Display Section -->
+    <section class="map-embed-section">
+        <div class="map-container" aria-label="Gaurai Studio Studio Location Map Frame">
+            <!-- Embedded Google Map targeting central studio zone tracking coordinates placeholder -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6175402035843!2d-73.98785312342571!3d40.74844047138914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Gaurai Studio</h3>
+                <p>Preserving timeless memories through standard modern photography frameworks.</p>
+                <div class="social-icons studio-socials">
+                    <h4>Follow Our Work:</h4>
+                    <a href="https://instagram.com/gauraistudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/gauraistudio" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/gauraistudio" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://pinterest.com/gauraistudio" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Contact & Enquiries</h3>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gaurauiwebsolutions@yahoo.com">gaurauiwebsolutions@yahoo.com</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nare.anand@yahoo.com">nare.anand@yahoo.com</a></p>
+                
+                <div class="social-icons developer-socials">
+                    <h4>Connect with Developer:</h4>
+                    <a href="https://instagram.com/gaurai_websolutions" target="_blank" title="Gaurai Websolutions Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/gaurai-websolutions" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gauraiwebsolutions" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://facebook.com/gauraiwebsolutions" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gaurai Studio. All Rights Reserved.</p>
+            <p class="credit">Developed and Designed by <strong>Gaurai Websolutions</strong></p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

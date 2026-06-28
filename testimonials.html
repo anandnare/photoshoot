@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials & Reviews | Gaurai Studio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">GAURAI<span>STUDIO</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html" class="active">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="header-content">
+            <h1>Client Love</h1>
+            <div class="small-divider"></div>
+            <p>Real stories and extended experiences shared by those who trusted our artistic eye.</p>
+        </div>
+    </section>
+
+    <!-- Post-Processing Technical Slider Showpiece Section -->
+    <section class="slider-showcase-section">
+        <div class="container-testimonials">
+            <h2>The Magic of Editing</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Slide the selector handle to see the raw file transformed by our master color-grading framework.</p>
+            
+            <div class="before-after-container" id="ba-slider">
+                <!-- Underneath Layer: Beautifully Edited Final Version -->
+                <img class="image-layer after-image" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90" alt="Beautifully Edited Masterpiece Frame">
+                
+                <!-- Overlay Layer: Raw Unedited Camera Shot Layer -->
+                <div class="image-layer before-wrap" id="before-wrapper">
+                    <!-- Stylized low contrast desaturated image proxying as real unpolished camera raw data output -->
+                    <img class="before-image" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&sat=-40&contrast=70&q=80" alt="Raw Unedited Original Camera Frame">
+                </div>
+                
+                <!-- Draggable Divider Line and Ring Handle -->
+                <div class="slider-divider-line" id="slider-handle">
+                    <div class="handle-button">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Reviews Grid Section -->
+    <section class="reviews-section">
+        <div class="container-testimonials">
+            <h2>Extended Experiences</h2>
+            <div class="divider"></div>
+            
+            <div class="reviews-masonry-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>"Absolute Masters of Framing"</h3>
+                    <p class="review-text">Working with Gaurai Studio for our wedding celebration was an absolute dream. We chose the Platinum package, and the deliverables exceeded our highest hopes. They managed complex indoor low-light restrictions across the reception venue elegantly. Every time we review the fine-art leather photo albums, the deep emotional textures of the crowd reactions feel vivid and present all over again.</p>
+                    <div class="client-meta">
+                        <strong>Sarah & Mark Jenkins</strong>
+                        <span>Wedding Client</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>"Elevated Our Corporate Identity"</h3>
+                    <p class="review-text">We commissioned the studio for a full-scale commercial asset refresh, targeting architectural details and premium product portraits. Their execution structure is exceptionally professional. They arrived on site exactly at dawn to harness golden hour lighting setups seamlessly. The final color grading process aligns cleanly with our brand typography protocols. Highly recommended for commercial enterprises.</p>
+                    <div class="client-meta">
+                        <strong>David Vance</strong>
+                        <span>Marketing Director, Apex Corp</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>"Incredible Studio Atmosphere"</h3>
+                    <p class="review-text">I tend to look remarkably tense in front of large camera apparatus lenses, but the studio environment they build is incredibly welcoming. They offered clear positioning guidance that felt relaxed rather than rigidly postured. The online display gallery link was delivered ahead of schedule via my secure portal workspace link. Exceptional individual portraiture output!</p>
+                    <div class="client-meta">
+                        <strong>Elena Rostova</strong>
+                        <span>Fine-Art Portrait Client</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="review-card">
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>"Preserved Memories to Perfection"</h3>
+                    <p class="review-text">They captured our outdoor family anniversary milestone with utter perfection. They were incredibly patient with our young children, turning a session that could have been stressful into a fun afternoon. The clarity of the prints is immaculate—no awkward crops, just pure, beautiful context preservation.</p>
+                    <div class="client-meta">
+                        <strong>The Miller Family</strong>
+                        <span>Outdoor Lifestyle Session</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Gaurai Studio</h3>
+                <p>Preserving timeless memories through standard modern photography frameworks.</p>
+                <div class="social-icons studio-socials">
+                    <h4>Follow Our Work:</h4>
+                    <a href="https://instagram.com/gauraistudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/gauraistudio" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/gauraistudio" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://pinterest.com/gauraistudio" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Contact & Enquiries</h3>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gaurauiwebsolutions@yahoo.com">gaurauiwebsolutions@yahoo.com</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nare.anand@yahoo.com">nare.anand@yahoo.com</a></p>
+                
+                <div class="social-icons developer-socials">
+                    <h4>Connect with Developer:</h4>
+                    <a href="https://instagram.com/gaurai_websolutions" target="_blank" title="Gaurai Websolutions Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/gaurai-websolutions" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gauraiwebsolutions" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://facebook.com/gauraiwebsolutions" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gaurai Studio. All Rights Reserved.</p>
+            <p class="credit">Developed and Designed by <strong>Gaurai Websolutions</strong></p>
+        </div>
+    </footer>
+
+    <script src="testimonials.js"></script>
+</body>
+</html>
