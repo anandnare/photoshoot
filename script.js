@@ -69,3 +69,21 @@ function updateToggleIcon(theme) {
             }
         });
     }
+
+// --- Mobile Menu Toggle Interaction Hook ---
+const menuBtn = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.nav-links');
+
+if (menuBtn && mobileNav) {
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents instant event bubble conflicts
+        mobileNav.classList.toggle('mobile-active');
+        
+        // Mutate the hamburger icon bars into a clean 'X' close mark safely
+        const iconNode = menuBtn.querySelector('i');
+        if (iconNode) {
+            iconNode.classList.toggle('fa-bars');
+            iconNode.classList.toggle('fa-xmark');
+        }
+    });
+}
