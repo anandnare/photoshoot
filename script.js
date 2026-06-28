@@ -52,3 +52,20 @@ function updateToggleIcon(theme) {
         icon.className = 'fa-solid fa-moon';
     }
 }
+
+// --- Mobile Menu Toggle Handler ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinksContainer) {
+        menuToggle.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('mobile-active');
+            
+            // Optional: Toggle between bars icon and an 'X' close mark icon
+            const toggleIcon = menuToggle.querySelector('i');
+            if(toggleIcon) {
+                toggleIcon.classList.toggle('fa-bars');
+                toggleIcon.classList.toggle('fa-xmark');
+            }
+        });
+    }
