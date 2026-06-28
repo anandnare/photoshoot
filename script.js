@@ -1,89 +1,61 @@
-// --- Hero Slide Management ---
-const slides = document.querySelectorAll('.hero-slideshow .slide');
-let currentHeroSlide = 0;
-
-function nextHeroSlide() {
-    slides[currentHeroSlide].classList.remove('active');
-    currentHeroSlide = (currentHeroSlide + 1) % slides.length;
-    slides[currentHeroSlide].classList.add('active');
-}
-setInterval(nextHeroSlide, 5000); // Transitions background view every 5 seconds
-
-
-// --- Testimonial Carousel Setup ---
-let activeTestimonialIndex = 0;
-const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-const dots = document.querySelectorAll('.slider-dots .dot');
-
-function currentSlide(index) {
-    testimonialSlides[activeTestimonialIndex].classList.remove('active');
-    dots[activeTestimonialIndex].classList.remove('active');
-    
-    activeTestimonialIndex = index;
-    
-    testimonialSlides[activeTestimonialIndex].classList.add('active');
-    dots[activeTestimonialIndex].classList.add('active');
-}
-
-
-// --- Dark & Light Mode Controller ---
+// --- Theme Toggle Logic ---
 const themeToggleBtn = document.getElementById('theme-toggle');
 const htmlElement = document.documentElement;
 
-// Access local configurations to remember user selections
-const savedTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', savedTheme);
-updateToggleIcon(savedTheme);
-
 themeToggleBtn.addEventListener('click', () => {
-    let currentTheme = htmlElement.getAttribute('data-theme');
-    let newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    let newTheme = 'light';
+
+    if (currentTheme === 'light') {
+        newTheme = 'dark';
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+
     htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateToggleIcon(newTheme);
 });
 
-function updateToggleIcon(theme) {
-    const icon = themeToggleBtn.querySelector('i');
-    if (theme === 'dark') {
-        icon.className = 'fa-solid fa-sun';
-    } else {
-        icon.className = 'fa-solid fa-moon';
-    }
-}
+// --- Mobile Navigation Menu Tile ---
+const menuTile = document.getElementById('menuTile');
+const navMenu = document.getElementById('navMenu');
 
-// --- Mobile Menu Toggle Handler ---
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinksContainer = document.querySelector('.nav-links');
+menuTile.addEventListener('click', () => {
+    menuTile.classList.toggle('open');
+    navMenu.classList.toggle('open');
+});
 
-    if (menuToggle && navLinksContainer) {
-        menuToggle.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('mobile-active');
-            
-            // Optional: Toggle between bars icon and an 'X' close mark icon
-            const toggleIcon = menuToggle.querySelector('i');
-            if(toggleIcon) {
-                toggleIcon.classList.toggle('fa-bars');
-                toggleIcon.classList.toggle('fa-xmark');
-            }
-        });
-    }
-
-// --- Mobile Menu Toggle Interaction Hook ---
-const menuBtn = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.nav-links');
-
-if (menuBtn && mobileNav) {
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevents instant event bubble conflicts
-        mobileNav.classList.toggle('mobile-active');
-        
-        // Mutate the hamburger icon bars into a clean 'X' close mark safely
-        const iconNode = menuBtn.querySelector('i');
-        if (iconNode) {
-            iconNode.classList.toggle('fa-bars');
-            iconNode.classList.toggle('fa-xmark');
-        }
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuTile.classList.remove('open');
+        navMenu.classList.remove('open');
     });
+});
+
+// --- Testimonials Slider Logic ---
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
 }
+
+function currentSlide(index) {
+    currentSlideIndex = index;
+    showSlide(currentSlideIndex);
+}
+
+// Auto change testimonials every 5 seconds
+setInterval(() => {
+    currentSlideIndex++;
+    if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+    }
+    showSlide(currentSlideIndex);
+}, 5000);
